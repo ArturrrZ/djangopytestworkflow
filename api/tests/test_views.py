@@ -7,6 +7,12 @@ from rest_framework import status
 def api_client():
     return APIClient()
 
+@pytest.mark.django_db
+def test_add_user_successful(api_client):
+    response = api_client.post('/api/users/', {"username": "testuser", "password": "testpass123"})
+    assert response.status_code == 201
+    
+
 @pytest.fixture
 def user_data():
     return {"username": "testuser", "password": "testpass123"}
@@ -54,3 +60,5 @@ def test_secured_view_authenticated(authenticated_client):
 def test_secured_view_unauthenticated(api_client):
     response = api_client.get('/api/secured/')
     assert response.status_code in [status.HTTP_403_FORBIDDEN, status.HTTP_401_UNAUTHORIZED, status.HTTP_302_FOUND]
+
+    
