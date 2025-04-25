@@ -28,4 +28,4 @@ def users(request):
 @api_view(['GET'])
 @login_required
 def secured(request):
-    return Response("secured")        
+    return Response("securedd")        
