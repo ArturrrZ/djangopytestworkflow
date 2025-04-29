@@ -13,7 +13,9 @@ jobs:
     # Шаг 1: Клонируем репозиторий
     - name: Checkout repository
       uses: actions/checkout@v4
-
+    #Шаг 1.1 Убираем ошибку shallow clone
+    - name: Convert shallow clone to full
+      run: git fetch --all --unshallow
     # Шаг 2: Устанавливаем Python
     - name: Set up Python
       uses: actions/setup-python@v4
