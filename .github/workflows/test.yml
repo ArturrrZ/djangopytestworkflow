@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # Ветка, на которую будет происходить деплой
+    paths-ignore:
+      - 'README.md'
 
 jobs:
   deploy:
