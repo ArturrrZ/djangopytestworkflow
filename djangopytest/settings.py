@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-uck#(*!nmg-u2_^=&m0u^jj22*i0tcc&ftz5&ij&7k62_3s&m2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangopytestworkflow-e4545a74de10.herokuapp.com']
 
 
 # Application definition
