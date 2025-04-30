@@ -1,0 +1,13 @@
+.env
+__pycache__/
+# Git and OS junk
+.git
+.github
+.gitignore
+*.swp
+.DS_Store
+Thumbs.db
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
